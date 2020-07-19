@@ -9,7 +9,7 @@
 ///   fonts:
 ///    - family:  ProductIcons
 ///      fonts:
-///       - asset: fonts/Product_Icons.ttf
+///       - asset: fonts/ProductIcons.ttf
 ///
 /// 
 /// * Material Design Icons, Copyright (C) Google, Inc
@@ -37,9 +37,9 @@ class ProductIcons {
   static const _kFontFam = 'ProductIcons';
   static const _kFontPkg = null;
 
-  static const IconData drone = IconData(0xe800, fontFamily: _kFontFam, fontPackage: _kFontPkg);          // android
-  static const IconData utility = IconData(0xea85, fontFamily: _kFontFam, fontPackage: _kFontPkg);        // robot_arm
-  static const IconData offense = IconData(0xf388, fontFamily: _kFontFam, fontPackage: _kFontPkg);        // rocket
+  static const IconData drone = IconData(0xe800, fontFamily: _kFontFam, fontPackage: _kFontPkg);      // android
+  static const IconData utility = IconData(0xea85, fontFamily: _kFontFam, fontPackage: _kFontPkg);    // robot_arm
+  static const IconData offense = IconData(0xf388, fontFamily: _kFontFam, fontPackage: _kFontPkg);       // rocket
   static const IconData defense = IconData(0xf3ed, fontFamily: _kFontFam, fontPackage: _kFontPkg);        // shield_alt
   static const IconData transport = IconData(0xf4df, fontFamily: _kFontFam, fontPackage: _kFontPkg);      // truck_moving
   static const IconData gadget = IconData(0xf544, fontFamily: _kFontFam, fontPackage: _kFontPkg);         // robot

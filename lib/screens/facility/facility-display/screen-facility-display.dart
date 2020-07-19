@@ -1,25 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:provider/provider.dart';
 import 'package:shop_app/constants.dart';
-import 'package:shop_app/models/Facility.dart';
-import 'package:shop_app/screens/facility_details/components/body.dart';
+import 'package:shop_app/facility-manager.dart';
+import 'package:shop_app/screens/facility/facility-display/components/body.dart';
 
-class DetailsScreen extends StatelessWidget {
-  final Facility facility;
 
-  const DetailsScreen({Key key, this.facility}) : super(key: key);
+class ScreenFacilityDisplay extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: facility.displayBackgroundColor,
+      backgroundColor: Provider.of<FacilityManager>(context)
+          .facilities[Provider.of<FacilityManager>(context).getCurrentFacilityIndex()]
+          .getBackgroundColor(),
       appBar: buildAppBar(context),
-      body: Body(facility: facility),
+      body: Body(),
     );
   }
 
   AppBar buildAppBar(BuildContext context) {
     return AppBar(
-      backgroundColor: facility.displayBackgroundColor,
+      backgroundColor: Provider.of<FacilityManager>(context)
+          .facilities[Provider.of<FacilityManager>(context).getCurrentFacilityIndex()]
+          .getBackgroundColor(),
       elevation: 0,
       leading: IconButton(
         icon: SvgPicture.asset(

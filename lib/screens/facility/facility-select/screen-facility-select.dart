@@ -1,9 +1,19 @@
+/*
+what it does:
+- display the grid of Facilities
+- use the Hero functionality to display the
+, Details Page when selecting a Facility
+ */
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:shop_app/constants.dart';
-import 'package:shop_app/screens/facility_home/components/body.dart';
 
-class HomeScreen extends StatelessWidget {
+import 'package:shop_app/screens/facility/facility-select/components/body.dart';
+
+class ScreenFacilitySelect extends StatelessWidget {
+  const ScreenFacilitySelect({Key key }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

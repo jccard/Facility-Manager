@@ -12,11 +12,8 @@ The only function I can think of right now is the sub-department display on
 import 'package:flutter/material.dart';
 import 'package:dart_json_mapper/dart_json_mapper.dart';
 
-import 'SubDepartment.dart';
-
-
 @jsonSerializable
-class Department {
+class SubDepartment {
   //region COMMON PROPERTIES
   int id;
   String name;
@@ -37,11 +34,12 @@ class Department {
   //endregion
 
   //region CLASS PROPERTIES
-  List<SubDepartment> subDepartments;
+//  Icon archetypeIcon;
+//  Icon subtypeIcon;
   //endregion
 
   //region CONSTRUCTOR
-  Department ({
+  SubDepartment ({
     //common properties
     this.id,
     this.name,
@@ -59,7 +57,8 @@ class Department {
     //this.currentAdditiveModifiers,
     //this.currentMultiplicativeModifiers,
     //class properties
-    this.subDepartments,
+//    this.archetypeIcon,
+//    this.subtypeIcon,
   });
   //endregion
 
@@ -112,7 +111,7 @@ class Department {
     return this.netIncomePerCycle;
   }
 
-/*
+  /*
 List<Modifier> getCurrentAdditiveModifiers () {
   return this.currentAdditiveModifiers;
 }
@@ -121,5 +120,5 @@ List<Modifier> currentMultiplicativeModifiers () {
   return this.currentMultiplicativeModifiers;
 }
   */
-//endregion
+  //endregion
 }

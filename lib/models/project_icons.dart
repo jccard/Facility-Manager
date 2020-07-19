@@ -9,7 +9,7 @@
 ///   fonts:
 ///    - family:  ResearchIcons
 ///      fonts:
-///       - asset: fonts/Project_Icons.ttf
+///       - asset: fonts/ProjectIcons.ttf
 ///
 /// 
 /// * Linecons, Copyright (C) 2013 by Designmodo
