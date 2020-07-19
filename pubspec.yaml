@@ -24,27 +24,25 @@ dependencies:
   flutter:
     sdk: flutter
   provider: ^4.1.2
-
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.3
-  flutter_svg: ^0.17.4 # it help us to use SVG in our app
+  material_design_icons_flutter: ^4.0.5345
+  icons_helper: ^1.0.4
+  flutter_svg: ^0.17.4
+  dart_json_mapper: ^1.5.16
+  dart_json_mapper_flutter: ^1.0.1 # complementary package; provides support for Flutter types
+  intl: ^0.16.1 #dart_json_mapper needs this
+  reflectable: ^2.2.5 #dart_json_mapper needs this
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
-# For information on the generic Dart part of this file, see the
-# following page: https://dart.dev/tools/pub/pubspec
+  build_runner: ^1.0.0
+  build_test: ^0.10.3
+  json_serializable: ^3.2.5
 
 # The following section is specific to Flutter.
 flutter:
-  # The following line ensures that the Material Icons font is
-  # included with your application, so that you can use the icons in
-  # the material Icons class.
   uses-material-design: true
-
-  # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/
     # assets/images/facilities: <a href="https://www.vecteezy.com/free-vector/factory">Factory Vectors by Vecteezy</a>
@@ -63,6 +61,7 @@ flutter:
     - assets/images/rpg_image_pack/stone/
     - assets/images/rpg_image_pack/wood/
     - assets/icons/
+    - assets/json/facility-data.json
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
@@ -74,33 +73,19 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: Employee_Icons
+    - family: EmployeeIcons
       fonts:
-        - asset: assets/fonts/Employee_Icons.ttf
+        - asset: assets/fonts/EmployeeIcons.ttf
         # attribution can be found in lib/models/employee_icons.dart
-    - family: Facility_Icons
+    - family: FacilityIcons
       fonts:
-        - asset: assets/fonts/Facility_Icons.ttf
+        - asset: assets/fonts/FacilityIcons.ttf
         # attribution can be found in lib/models/facility_icons.dart
-    - family: Product_Icons
+    - family: ProductIcons
       fonts:
-        - asset: assets/fonts/Product_Icons.ttf
+        - asset: assets/fonts/ProductIcons.ttf
         # attribution can be found in lib/models/product_icons.dart
-    - family: Research_Icons
+    - family: ResearchIcons
       fonts:
-        - asset: assets/fonts/Project_Icons.ttf
+        - asset: assets/fonts/ProjectIcons.ttf
         # attribution can be found in lib/models/project_icons.dart
-  #
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
-  #   - family: Trajan Pro
-  #     fonts:
-  #       - asset: fonts/TrajanPro.ttf
-  #       - asset: fonts/TrajanPro_Bold.ttf
-  #         weight: 700
-  #
-  # For details regarding fonts from package dependencies,
-  # see https://flutter.dev/custom-fonts/#from-packages

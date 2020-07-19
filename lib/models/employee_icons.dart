@@ -9,7 +9,7 @@
 ///   fonts:
 ///    - family:  EmployeeIcons
 ///      fonts:
-///       - asset: fonts/Employee_Icons.ttf
+///       - asset: fonts/EmployeeIcons.ttf
 ///
 /// 
 /// * Elusive, Copyright (C) 2013 by Aristeides Stathopoulos

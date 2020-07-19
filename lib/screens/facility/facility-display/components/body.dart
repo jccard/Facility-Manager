@@ -1,15 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:shop_app/models/Facility.dart';
 
-import 'stats_panel.dart';
-import 'product_title_with_image.dart';
-import '../../../constants.dart';
+import '../../../facility/facility-display/components/stats_panel.dart';
+import 'package:shop_app/screens/facility/facility-display/components/product_title_with_image.dart';
+import 'package:shop_app/constants.dart';
 
 class Body extends StatelessWidget {
-  final Facility facility;
 
-  const Body({Key key, this.facility}) : super(key: key);
+  const Body({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +15,7 @@ class Body extends StatelessWidget {
       children: <Widget>[
         Expanded(
           flex: 2,
-          child: ProductTitleWithImage(facility: facility),
+          child: ProductTitleWithImage(),
         ),
         Expanded(
           flex: 8,
@@ -34,7 +32,7 @@ class Body extends StatelessWidget {
                 topRight: Radius.circular(24),
               ),
             ),
-            child: StatsPanel(facility: facility),
+            child: StatsPanel(),
           ),
         ),
       ],

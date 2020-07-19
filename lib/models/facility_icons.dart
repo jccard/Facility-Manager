@@ -33,7 +33,7 @@ class FacilityIcons {
   static const _kFontFam = 'FacilityIcons';
   static const _kFontPkg = null;
 
-  static const IconData tier_2 = IconData(0xe811, fontFamily: _kFontFam, fontPackage: _kFontPkg);  // commerical_building
+  static const IconData tier_2 = IconData(0xe811, fontFamily: _kFontFam, fontPackage: _kFontPkg);  // commercial_building
   static const IconData tier_1 = IconData(0xe822, fontFamily: _kFontFam, fontPackage: _kFontPkg);  // industrial_building
   static const IconData tier_4 = IconData(0xe8a0, fontFamily: _kFontFam, fontPackage: _kFontPkg);  // building_filled
   static const IconData tier_3 = IconData(0xf0f7, fontFamily: _kFontFam, fontPackage: _kFontPkg);  // building
