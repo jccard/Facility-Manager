@@ -1,0 +1,768 @@
+
+  {
+    "__comment__": "facility_meta_theme_or_preferences",
+    "id": 1,
+    "name": "userProvidedFacilityName",
+    "image": "assets/images/facilities/Factory_01.png",
+    "archetypeIcon": "factory",
+    "subtypeIcon": "factory",
+    "backgroundColor": "#FF3D82AE",
+    "primaryColor": "#FF3D82AE",
+    "secondaryColor": "#FF3D82AE",
+    "accentColor": "#FF3D82AE",
+    "shortDescription": "We make gun stuff!",
+    "longDescription": "Universal rotary loaded, variable calibre machine guns.",
+    "active": true,
+    "grossIncomePerCycle": 5.0,
+    "netIncomePerCycle": 5.0,
+    "currentCash": 10.0,
+    "modifiers": [],
+    "productionLines": [
+      {
+        "__comment__": "prod_line_01",
+        "id": 1000,
+        "name": "Generic Machine Gun",
+        "image": "assets/images/facilities/Factory_02.png",
+        "archetypeIcon": "factoryIcon",
+        "subtypeIcon": "factoryIcon",
+        "backgroundColor": "#FF3D82AE",
+        "primaryColor": "#FF3D82AE",
+        "secondaryColor": "#FF3D82AE",
+        "accentColor": "#FF3D82AE",
+        "shortDescription": "I'm just a gun",
+        "longDescription": "Mid-range calibre, rapid reload, recoil adapter",
+        "active": true,
+        "grossIncomePerCycle": 10.0,
+        "netIncomePerCycle": 10.0,
+        "modifiers": [],
+        "departments": [
+          {
+            "__comment__": "prod_line_01-tooling_dept",
+            "id": 1110,
+            "name": "",
+            "image": "assets/images/rpg_image_pack/cloth/cs_t_01.PNG",
+            "archetypeIcon": "tankerTruck",
+            "subtypeIcon": "sword",
+            "active": true,
+            "grossIncomePerCycle": 4.0,
+            "netIncomePerCycle": 4.0,
+            "modifiers": [],
+            "teamMembers": [
+              {
+                "__comment__": "prod_line_01-tooling_dept-team_01",
+                "id": 1111,
+                "name": "Alan Allens",
+                "image": "assets/images/rpg_image_pack/cloth/cs_t_01.PNG",
+                "archetypeIcon": "powershell",
+                "subtypeIcon": "powershell",
+                "active": true,
+                "level": 1,
+                "toNextLevel": 58,
+                "grossIncomePerCycle": 1.0,
+                "netIncomePerCycle": 1.0,
+                "modifiers": [
+                  {
+                    "id": 1,
+                    "name": "Team Leader",
+                    "icon": "account-child",
+                    "active": true,
+                    "manufacturingAdd": 0.0,
+                    "manufacturingMulti": 1.2,
+                    "teamsAdd": 0.0,
+                    "teamsMulti": 1.3,
+                    "researchAdd": 0.0,
+                    "researchMulti": 1.1
+                  }
+                ]
+              },
+              {
+                "__comment__": "prod_line_01-tooling_dept-team_02",
+                "id": 1112,
+                "name": "Mary Marsons",
+                "image": "assets/images/rpg_image_pack/cloth/cs_t_02.PNG",
+                "archetypeIcon": "printer3d",
+                "subtypeIcon": "printer3d",
+                "active": true,
+                "level": 1,
+                "toNextLevel": 47,
+                "grossIncomePerCycle": 1.0,
+                "netIncomePerCycle": 1.0,
+                "modifiers": [
+                  {
+                    "id": 1,
+                    "name": "default",
+                    "active": true,
+                    "manufacturingAdd": 0.0,
+                    "manufacturingMulti": 1.2,
+                    "teamsAdd": 0.0,
+                    "teamsMulti": 1.25,
+                    "researchAdd": 0.0,
+                    "researchMulti": 1.1
+                  }
+                ]
+              },
+              {
+                "__comment__": "prod_line_01-tooling_dept-team_03",
+                "id": 1113,
+                "name": "Jeff Jeffries",
+                "image": "assets/images/rpg_image_pack/cloth/cs_t_03.PNG",
+                "archetypeIcon": "rabbit",
+                "subtypeIcon": "rabbit",
+                "active": true,
+                "level": 1,
+                "toNextLevel": 64,
+                "grossIncomePerCycle": 1.0,
+                "netIncomePerCycle": 1.0,
+                "modifiers": [
+                  {
+                    "id": 1,
+                    "name": "default",
+                    "active": true,
+                    "manufacturingAdd": 0.0,
+                    "manufacturingMulti": 1.2,
+                    "teamsAdd": 0.0,
+                    "teamsMulti": 1.28,
+                    "researchAdd": 0.0,
+                    "researchMulti": 1.1
+                  }
+                ]
+              },
+              {
+                "__comment__": "prod_line_01-tooling_dept-team_04",
+                "id": 1114,
+                "name": "Tom Tommers",
+                "image": "assets/images/rpg_image_pack/cloth/cs_t_03.PNG",
+                "archetypeIcon": "rabbit",
+                "subtypeIcon": "rabbit",
+                "active": true,
+                "level": 1,
+                "toNextLevel": 35,
+                "grossIncomePerCycle": 1.0,
+                "netIncomePerCycle": 1.0,
+                "modifiers": [
+                  {
+                    "id": 1,
+                    "name": "default",
+                    "active": true,
+                    "manufacturingAdd": 0.0,
+                    "manufacturingMulti": 1.2,
+                    "teamsAdd": 0.0,
+                    "teamsMulti": 1.16,
+                    "researchAdd": 0.0,
+                    "researchMulti": 1.1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "__comment__": "prod_line_01-assembly_dept",
+            "id": 1120,
+            "name": "",
+            "image": "assets/images/rpg_image_pack/cloth/cs_t_02.PNG",
+            "archetypeIcon": "tank",
+            "subtypeIcon": "shield",
+            "backgroundColor": "#FF989493",
+            "primaryColor": "#FF989493",
+            "secondaryColor": "#FF989493",
+            "accentColor": "#FF3D82AE",
+            "shortDescription": "short description 02",
+            "longDescription": "a longer description, with more words 02",
+            "active": true,
+            "grossIncomePerCycle": 6.0,
+            "netIncomePerCycle": 6.0,
+            "modifiers": [],
+            "teamMembers": [
+              {
+                "__comment__": "prod_line_01-tooling_dept-team_01",
+                "id": 1121,
+                "name": "Alan Allens",
+                "image": "assets/images/rpg_image_pack/cloth/cs_t_01.PNG",
+                "archetypeIcon": "powershell",
+                "subtypeIcon": "powershell",
+                "active": true,
+                "level": 1,
+                "toNextLevel": 35,
+                "grossIncomePerCycle": 2.0,
+                "netIncomePerCycle": 2.0,
+                "modifiers": [
+                  {
+                    "id": 1,
+                    "name": "Team Leader",
+                    "icon": "account-child",
+                    "shortDescription": "team leader, short description",
+                    "longDescription": "team leader, long description",
+                    "active": true,
+                    "manufacturingAdd": 0.0,
+                    "manufacturingMulti": 1.2,
+                    "teamsAdd": 0.0,
+                    "teamsMulti": 1.11,
+                    "researchAdd": 0.0,
+                    "researchMulti": 1.1
+                  }
+                ]
+              },
+              {
+                "__comment__": "prod_line_01-tooling_dept-team_02",
+                "id": 1122,
+                "name": "Mary Marsons",
+                "image": "assets/images/rpg_image_pack/cloth/cs_t_02.PNG",
+                "archetypeIcon": "printer3d",
+                "subtypeIcon": "printer3d",
+                "active": true,
+                "level": 1,
+                "toNextLevel": 70,
+                "grossIncomePerCycle": 2.0,
+                "netIncomePerCycle": 2.0,
+                "modifiers": [
+                  {
+                    "id": 1,
+                    "name": "default",
+                    "active": true,
+                    "manufacturingAdd": 0.0,
+                    "manufacturingMulti": 1.2,
+                    "teamsAdd": 0.0,
+                    "teamsMulti": 1.18,
+                    "researchAdd": 0.0,
+                    "researchMulti": 1.1
+                  }
+                ]
+              },
+              {
+                "__comment__": "prod_line_01-tooling_dept-team_03",
+                "id": 1123,
+                "name": "Jeff Jeffries",
+                "image": "assets/images/rpg_image_pack/cloth/cs_t_03.PNG",
+                "archetypeIcon": "rabbit",
+                "subtypeIcon": "rabbit",
+                "active": true,
+                "level": 1,
+                "toNextLevel": 65,
+                "grossIncomePerCycle": 1.0,
+                "netIncomePerCycle": 1.0,
+                "modifiers": [
+                  {
+                    "id": 1,
+                    "name": "default",
+                    "active": true,
+                    "manufacturingAdd": 0.0,
+                    "manufacturingMulti": 1.2,
+                    "teamsAdd": 0.0,
+                    "teamsMulti": 1.22,
+                    "researchAdd": 0.0,
+                    "researchMulti": 1.1
+                  }
+                ]
+              },
+              {
+                "__comment__": "prod_line_01-tooling_dept-team_04",
+                "id": 1124,
+                "name": "Tom Tommers",
+                "image": "assets/images/rpg_image_pack/cloth/cs_t_03.PNG",
+                "archetypeIcon": "rabbit",
+                "subtypeIcon": "rabbit",
+                "active": true,
+                "level": 1,
+                "toNextLevel": 45,
+                "grossIncomePerCycle": 1.0,
+                "netIncomePerCycle": 1.0,
+                "modifiers": [
+                  {
+                    "id": 1,
+                    "name": "default",
+                    "active": true,
+                    "manufacturingAdd": 0.0,
+                    "manufacturingMulti": 1.2,
+                    "teamsAdd": 0.0,
+                    "teamsMulti": 1.30,
+                    "researchAdd": 0.0,
+                    "researchMulti": 1.1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "__comment__": "prod_line_01-testing_dept",
+            "id": 1130,
+            "name": "",
+            "image": "assets/images/rpg_image_pack/cloth/cs_t_02.PNG",
+            "archetypeIcon": "shield",
+            "subtypeIcon": "shield",
+            "active": true,
+            "grossIncomePerCycle": 4.0,
+            "netIncomePerCycle": 4.0,
+            "modifiers": [],
+            "teamMembers": [
+              {
+                "__comment__": "prod_line_01-testing_dept-team_01",
+                "id": 1131,
+                "name": "Alan Allens",
+                "image": "assets/images/rpg_image_pack/cloth/cs_t_01.PNG",
+                "archetypeIcon": "powershell",
+                "subtypeIcon": "powershell",
+                "active": true,
+                "level": 1,
+                "toNextLevel": 34,
+                "grossIncomePerCycle": 1.0,
+                "netIncomePerCycle": 1.0,
+                "modifiers": [
+                  {
+                    "id": 1,
+                    "name": "Team Leader",
+                    "icon": "account-child",
+                    "shortDescription": "team leader, short description",
+                    "longDescription": "team leader, long description",
+                    "active": true,
+                    "manufacturingAdd": 0.0,
+                    "manufacturingMulti": 1.2,
+                    "teamsAdd": 0.0,
+                    "teamsMulti": 1.29,
+                    "researchAdd": 0.0,
+                    "researchMulti": 1.1
+                  }
+                ]
+              },
+              {
+                "__comment__": "prod_line_01-testing_dept-team_02",
+                "id": 1132,
+                "name": "Mary Marsons",
+                "image": "assets/images/rpg_image_pack/cloth/cs_t_02.PNG",
+                "archetypeIcon": "printer3d",
+                "subtypeIcon": "printer3d",
+                "active": true,
+                "level": 1,
+                "toNextLevel": 50,
+                "grossIncomePerCycle": 1.0,
+                "netIncomePerCycle": 1.0,
+                "modifiers": [
+                  {
+                    "id": 1,
+                    "name": "default",
+                    "active": true,
+                    "manufacturingAdd": 0.0,
+                    "manufacturingMulti": 1.2,
+                    "teamsAdd": 0.0,
+                    "teamsMulti": 1.26,
+                    "researchAdd": 0.0,
+                    "researchMulti": 1.1
+                  }
+                ]
+              },
+              {
+                "__comment__": "prod_line_01-testing_dept-team_03",
+                "id": 1133,
+                "name": "Jeff Jeffries",
+                "image": "assets/images/rpg_image_pack/cloth/cs_t_03.PNG",
+                "archetypeIcon": "rabbit",
+                "subtypeIcon": "rabbit",
+                "active": true,
+                "level": 1,
+                "toNextLevel": 60,
+                "grossIncomePerCycle": 1.0,
+                "netIncomePerCycle": 1.0,
+                "modifiers": [
+                  {
+                    "id": 1,
+                    "name": "default",
+                    "active": true,
+                    "manufacturingAdd": 0.0,
+                    "manufacturingMulti": 1.2,
+                    "teamsAdd": 0.0,
+                    "teamsMulti": 1.36,
+                    "researchAdd": 0.0,
+                    "researchMulti": 1.1
+                  }
+                ]
+              },
+              {
+                "__comment__": "prod_line_01-testing_dept-team_04",
+                "id": 1134,
+                "name": "Tom Tommers",
+                "image": "assets/images/rpg_image_pack/cloth/cs_t_03.PNG",
+                "archetypeIcon": "rabbit",
+                "subtypeIcon": "rabbit",
+                "active": true,
+                "level": 1,
+                "toNextLevel": 20,
+                "grossIncomePerCycle": 1.0,
+                "netIncomePerCycle": 1.0,
+                "modifiers": [
+                  {
+                    "id": 1,
+                    "name": "default",
+                    "active": true,
+                    "manufacturingAdd": 0.0,
+                    "manufacturingMulti": 1.2,
+                    "teamsAdd": 0.0,
+                    "teamsMulti": 1.32,
+                    "researchAdd": 0.0,
+                    "researchMulti": 1.1
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "research": [
+          {
+            "__comment__": "prod_line_01-ballistics_research",
+            "id": 1210,
+            "name": "",
+            "image": "assets/images/rpg_image_pack/cloth/cs_t_01.PNG",
+            "archetypeIcon": "flask-outline",
+            "subtypeIcon": "sword",
+            "backgroundColor": "#FF3D82AE",
+            "primaryColor": "#FF3D82AE",
+            "secondaryColor": "#FF3D82AE",
+            "accentColor": "#FF3D82AE",
+            "shortDescription": "machine gun",
+            "longDescription": "machine gun, with more words",
+            "active": true,
+            "grossIncomePerCycle": 5.0,
+            "netIncomePerCycle": 5.0,
+            "modifiers": [],
+            "teamMembers": [
+              {
+                "__comment__": "prod_line_01-ballistics-team_01",
+                "id": 1211,
+                "name": "Alan Allens",
+                "image": "assets/images/rpg_image_pack/cloth/cs_t_01.PNG",
+                "archetypeIcon": "powershell",
+                "subtypeIcon": "powershell",
+                "active": true,
+                "grossIncomePerCycle": 4.0,
+                "netIncomePerCycle": 3.0,
+                "modifiers": [
+                  {
+                    "id": 1,
+                    "name": "Team Leader",
+                    "icon": "account-child",
+                    "shortDescription": "team leader, short description",
+                    "longDescription": "team leader, long description",
+                    "active": true,
+                    "manufacturingAdd": 0.0,
+                    "manufacturingMulti": 1.2,
+                    "teamsAdd": 0.0,
+                    "teamsMulti": 1.5,
+                    "researchAdd": 0.0,
+                    "researchMulti": 1.1
+                  }
+                ]
+              },
+              {
+                "__comment__": "prod_line_01-ballistics_research-team_02",
+                "id": 1212,
+                "name": "Mary Marsons",
+                "image": "assets/images/rpg_image_pack/cloth/cs_t_02.PNG",
+                "archetypeIcon": "printer3d",
+                "subtypeIcon": "printer3d",
+                "active": true,
+                "grossIncomePerCycle": 3.0,
+                "netIncomePerCycle": 3.0,
+                "modifiers": [
+                  {
+                    "id": 1,
+                    "name": "default",
+                    "active": true,
+                    "manufacturingAdd": 0.0,
+                    "manufacturingMulti": 1.2,
+                    "teamsAdd": 0.0,
+                    "teamsMulti": 1.5,
+                    "researchAdd": 0.0,
+                    "researchMulti": 1.1
+                  }
+                ]
+              },
+              {
+                "__comment__": "prod_line_01-ballistics_research-team_03",
+                "id": 1213,
+                "name": "Jeff Jeffries",
+                "image": "assets/images/rpg_image_pack/cloth/cs_t_03.PNG",
+                "archetypeIcon": "rabbit",
+                "subtypeIcon": "rabbit",
+                "active": true,
+                "grossIncomePerCycle": 2.5,
+                "netIncomePerCycle": 1.2,
+                "modifiers": [
+                  {
+                    "id": 1,
+                    "name": "default",
+                    "active": true,
+                    "manufacturingAdd": 0.0,
+                    "manufacturingMulti": 1.2,
+                    "teamsAdd": 0.0,
+                    "teamsMulti": 1.5,
+                    "researchAdd": 0.0,
+                    "researchMulti": 1.1
+                  }
+                ]
+              },
+              {
+                "__comment__": "prod_line_01-ballistics_research-team_04",
+                "id": 1214,
+                "name": "Tom Tommers",
+                "image": "assets/images/rpg_image_pack/cloth/cs_t_03.PNG",
+                "archetypeIcon": "rabbit",
+                "subtypeIcon": "rabbit",
+                "active": true,
+                "grossIncomePerCycle": 2.5,
+                "netIncomePerCycle": 1.2,
+                "modifiers": [
+                  {
+                    "id": 1,
+                    "name": "default",
+                    "active": true,
+                    "manufacturingAdd": 0.0,
+                    "manufacturingMulti": 1.2,
+                    "teamsAdd": 0.0,
+                    "teamsMulti": 1.5,
+                    "researchAdd": 0.0,
+                    "researchMulti": 1.1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "__comment__": "research_02-reloader_research",
+            "id": 1220,
+            "name": "",
+            "image": "assets/images/rpg_image_pack/cloth/cs_t_02.PNG",
+            "archetypeIcon": "flask-empty",
+            "subtypeIcon": "shield",
+            "backgroundColor": "#FF989493",
+            "primaryColor": "#FF989493",
+            "secondaryColor": "#FF989493",
+            "accentColor": "#FF3D82AE",
+            "shortDescription": "short description 02",
+            "longDescription": "a longer description, with more words 02",
+            "active": true,
+            "grossIncomePerCycle": 5.0,
+            "netIncomePerCycle": 5.0,
+            "modifiers": [],
+            "teamMembers": [
+              {
+                "__comment__": "prod_line_01-reloader_research-team_01",
+                "id": 1221,
+                "name": "Alan Allens",
+                "image": "assets/images/rpg_image_pack/cloth/cs_t_01.PNG",
+                "archetypeIcon": "powershell",
+                "subtypeIcon": "powershell",
+                "active": true,
+                "grossIncomePerCycle": 4.0,
+                "netIncomePerCycle": 3.0,
+                "modifiers": [
+                  {
+                    "id": 1,
+                    "name": "Team Leader",
+                    "icon": "account-child",
+                    "shortDescription": "team leader, short description",
+                    "longDescription": "team leader, long description",
+                    "active": true,
+                    "manufacturingAdd": 0.0,
+                    "manufacturingMulti": 1.2,
+                    "teamsAdd": 0.0,
+                    "teamsMulti": 1.5,
+                    "researchAdd": 0.0,
+                    "researchMulti": 1.1
+                  }
+                ]
+              },
+              {
+                "__comment__": "prod_line_01-reloader_research-team_02",
+                "id": 1222,
+                "name": "Mary Marsons",
+                "image": "assets/images/rpg_image_pack/cloth/cs_t_02.PNG",
+                "archetypeIcon": "printer3d",
+                "subtypeIcon": "printer3d",
+                "active": true,
+                "grossIncomePerCycle": 3.0,
+                "netIncomePerCycle": 3.0,
+                "modifiers": [
+                  {
+                    "id": 1,
+                    "name": "default",
+                    "active": true,
+                    "manufacturingAdd": 0.0,
+                    "manufacturingMulti": 1.2,
+                    "teamsAdd": 0.0,
+                    "teamsMulti": 1.5,
+                    "researchAdd": 0.0,
+                    "researchMulti": 1.1
+                  }
+                ]
+              },
+              {
+                "__comment__": "prod_line_01-reloader_research-team_03",
+                "id": 1223,
+                "name": "Jeff Jeffries",
+                "image": "assets/images/rpg_image_pack/cloth/cs_t_03.PNG",
+                "archetypeIcon": "rabbit",
+                "subtypeIcon": "rabbit",
+                "active": true,
+                "grossIncomePerCycle": 2.5,
+                "netIncomePerCycle": 1.2,
+                "modifiers": [
+                  {
+                    "id": 1,
+                    "name": "default",
+                    "active": true,
+                    "manufacturingAdd": 0.0,
+                    "manufacturingMulti": 1.2,
+                    "teamsAdd": 0.0,
+                    "teamsMulti": 1.5,
+                    "researchAdd": 0.0,
+                    "researchMulti": 1.1
+                  }
+                ]
+              },
+              {
+                "__comment__": "prod_line_01-reloader_research-team_04",
+                "id": 1224,
+                "name": "Tom Tommers",
+                "image": "assets/images/rpg_image_pack/cloth/cs_t_03.PNG",
+                "archetypeIcon": "rabbit",
+                "subtypeIcon": "rabbit",
+                "active": true,
+                "grossIncomePerCycle": 2.5,
+                "netIncomePerCycle": 1.2,
+                "modifiers": [
+                  {
+                    "id": 1,
+                    "name": "default",
+                    "active": true,
+                    "manufacturingAdd": 0.0,
+                    "manufacturingMulti": 1.2,
+                    "teamsAdd": 0.0,
+                    "teamsMulti": 1.5,
+                    "researchAdd": 0.0,
+                    "researchMulti": 1.1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "__comment__": "research_03-recoil_research",
+            "id": 1230,
+            "name": "",
+            "image": "assets/images/rpg_image_pack/cloth/cs_t_02.PNG",
+            "archetypeIcon": "flask-round-bottom-outline",
+            "subtypeIcon": "shield",
+            "backgroundColor": "#FF989493",
+            "primaryColor": "#FF989493",
+            "secondaryColor": "#FF989493",
+            "accentColor": "#FF3D82AE",
+            "shortDescription": "short description 03",
+            "longDescription": "a longer description, with more words 03",
+            "active": true,
+            "grossIncomePerCycle": 5.0,
+            "netIncomePerCycle": 5.0,
+            "modifiers": [],
+            "teamMembers": [
+              {
+                "__comment__": "prod_line_01-recoil_research-team_01",
+                "id": 1231,
+                "name": "Alan Allens",
+                "image": "assets/images/rpg_image_pack/cloth/cs_t_01.PNG",
+                "archetypeIcon": "powershell",
+                "subtypeIcon": "powershell",
+                "active": true,
+                "grossIncomePerCycle": 4.0,
+                "netIncomePerCycle": 3.0,
+                "modifiers": [
+                  {
+                    "id": 1,
+                    "name": "Team Leader",
+                    "icon": "account-child",
+                    "shortDescription": "team leader, short description",
+                    "longDescription": "team leader, long description",
+                    "active": true,
+                    "manufacturingAdd": 0.0,
+                    "manufacturingMulti": 1.2,
+                    "teamsAdd": 0.0,
+                    "teamsMulti": 1.5,
+                    "researchAdd": 0.0,
+                    "researchMulti": 1.1
+                  }
+                ]
+              },
+              {
+                "__comment__": "prod_line_01-recoil_research-team_02",
+                "id": 1232,
+                "name": "Mary Marsons",
+                "image": "assets/images/rpg_image_pack/cloth/cs_t_02.PNG",
+                "archetypeIcon": "printer3d",
+                "subtypeIcon": "printer3d",
+                "active": true,
+                "grossIncomePerCycle": 3.0,
+                "netIncomePerCycle": 3.0,
+                "modifiers": [
+                  {
+                    "id": 1,
+                    "name": "default",
+                    "active": true,
+                    "manufacturingAdd": 0.0,
+                    "manufacturingMulti": 1.2,
+                    "teamsAdd": 0.0,
+                    "teamsMulti": 1.5,
+                    "researchAdd": 0.0,
+                    "researchMulti": 1.1
+                  }
+                ]
+              },
+              {
+                "__comment__": "prod_line_01-recoil_research-team_03",
+                "id": 1233,
+                "name": "Jeff Jeffries",
+                "image": "assets/images/rpg_image_pack/cloth/cs_t_03.PNG",
+                "archetypeIcon": "rabbit",
+                "subtypeIcon": "rabbit",
+                "active": true,
+                "grossIncomePerCycle": 2.5,
+                "netIncomePerCycle": 1.2,
+                "modifiers": [
+                  {
+                    "id": 1,
+                    "name": "default",
+                    "active": true,
+                    "manufacturingAdd": 0.0,
+                    "manufacturingMulti": 1.2,
+                    "teamsAdd": 0.0,
+                    "teamsMulti": 1.5,
+                    "researchAdd": 0.0,
+                    "researchMulti": 1.1
+                  }
+                ]
+              },
+              {
+                "__comment__": "prod_line_01-recoil_research-team_04",
+                "id": 1234,
+                "name": "Tom Tommers",
+                "image": "assets/images/rpg_image_pack/cloth/cs_t_03.PNG",
+                "archetypeIcon": "rabbit",
+                "subtypeIcon": "rabbit",
+                "active": true,
+                "grossIncomePerCycle": 2.5,
+                "netIncomePerCycle": 1.2,
+                "modifiers": [
+                  {
+                    "id": 1,
+                    "name": "default",
+                    "active": true,
+                    "manufacturingAdd": 0.0,
+                    "manufacturingMulti": 1.2,
+                    "teamsAdd": 0.0,
+                    "teamsMulti": 1.5,
+                    "researchAdd": 0.0,
+                    "researchMulti": 1.1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }

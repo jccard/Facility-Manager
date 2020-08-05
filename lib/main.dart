@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shop_app/constants.dart';
@@ -8,13 +10,13 @@ import 'package:dart_json_mapper/dart_json_mapper.dart';
 import 'package:dart_json_mapper_flutter/dart_json_mapper_flutter.dart'
     show flutterColorAdapter;
 import 'main.reflectable.dart';
-//models
-import 'package:shop_app/facility-manager.dart';
+//manager and models
+import 'package:shop_app/services/facility-manager.dart';
 import 'package:shop_app/models/Facility.dart';
-import 'package:shop_app/models/Department.dart';
-import 'package:shop_app/models/SubDepartment.dart';
+import 'package:shop_app/models/ProdLine.dart';
+import 'package:shop_app/models/Modifier.dart';
 
-import 'package:shop_app/screens/facility/facility-select/screen-facility-select.dart';
+import 'package:shop_app/screens/facility/production_lines/select.dart';
 
 void main() {
   initializeReflectable();
@@ -29,13 +31,23 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   bool dataLoadCompleted = false;
   final FacilityManager facilityManager = FacilityManager();
+  Timer _timer;
 
-  Future<String> _loadLocalJsonAssetAsString() async {
-    return await rootBundle.loadString('assets/json/facility-data.json');
+  void _startTimer() {
+    _timer = Timer.periodic(Duration(seconds: 1), (timer) {
+      setState(() {
+        facilityManager.updateFacilityCurrentCash();
+      });
+    });
   }
 
-  Future createFacilitiesFromJson() async {
+  Future<String> _loadLocalJsonAssetAsString() async {
+    return await rootBundle.loadString('assets/json/prod-lines.json');
+  }
+
+  Future createFacilityFromJson() async {
     String facilityString = await _loadLocalJsonAssetAsString();
+    //Facility facilityObject = JsonMapper.deserialize<Facility>(facilityString);
     Facility facilityObject = JsonMapper.deserialize<Facility>(facilityString);
     print("createFacilitiesFromJson - facilityObject result: ${facilityObject}");
     facilityManager.addFromMain(facilityObject);
@@ -43,16 +55,19 @@ class _MyAppState extends State<MyApp> {
 
   @override
   void initState() {
-
     JsonMapper()
         .useAdapter(flutterColorAdapter)
         .useAdapter(JsonMapperAdapter(valueDecorators: {
-          typeOf<List<Department>>(): (value) => value.cast<Department>(),
-          typeOf<List<SubDepartment>>(): (value) => value.cast<SubDepartment>()
+          typeOf<List<Facility>>(): (value) => value.cast<Facility>(),
+          typeOf<List<Modifier>>(): (value) => value.cast<Modifier>(),
+          typeOf<List<ProdLine>>(): (value) => value.cast<ProdLine>(),
+          typeOf<List<ProdLineDepartment>>(): (value) => value.cast<ProdLineDepartment>(),
+          typeOf<List<Employee>>(): (value) => value.cast<Employee>(),
         }));
-    createFacilitiesFromJson().then((result) {
+    createFacilityFromJson().then((result) {
       setState(() {
         dataLoadCompleted = true;
+        _startTimer();
       });
     });
     super.initState();
@@ -76,7 +91,7 @@ class _MyAppState extends State<MyApp> {
             textTheme: Theme.of(context).textTheme.apply(bodyColor: kTextColor),
             visualDensity: VisualDensity.adaptivePlatformDensity,
           ),
-          home: ScreenFacilitySelect(),
+          home: Select(),
         ),
       );
     }

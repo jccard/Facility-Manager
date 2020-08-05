@@ -62,6 +62,7 @@ flutter:
     - assets/images/rpg_image_pack/wood/
     - assets/icons/
     - assets/json/facility-data.json
+    - assets/json/prod-lines.json
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

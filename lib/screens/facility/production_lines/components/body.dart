@@ -2,13 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shop_app/constants.dart';
 
-import 'package:shop_app/facility-manager.dart';
+import 'package:shop_app/services/facility-manager.dart';
 
-import 'package:shop_app/screens/facility/facility-display/screen-facility-display.dart';
-import 'package:shop_app/screens/facility/facility-select/components/item-card.dart';
+import 'package:shop_app/screens/facility/display/screen-facility-display.dart';
+import 'package:shop_app/screens/facility/production_line/display.dart';
+import 'package:shop_app/screens/facility/production_lines/components/item-card.dart';
 
 class Body extends StatelessWidget {
   const Body({ Key key }) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
@@ -17,15 +19,16 @@ class Body extends StatelessWidget {
       children: <Widget>[
         Padding(
             padding: const EdgeInsets.symmetric(horizontal: kDefaultPaddin),
+            child: SizedBox(height: kDefaultPaddin),
             //child: Categories(),
-            child: Text('Categories() goes here'),
+            //child: Text('not sure what to do with this yet'),
         ),
         Expanded(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: kDefaultPaddin),
             child: GridView.builder(
               itemCount:
-                  Provider.of<FacilityManager>(context).getFacilityCount(),
+                  Provider.of<FacilityManager>(context).getProdLinesCount(),
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
                 mainAxisSpacing: kDefaultPaddin,
@@ -33,12 +36,17 @@ class Body extends StatelessWidget {
                 childAspectRatio: 0.8,
               ),
               itemBuilder: (context, index) => ItemCard(
+                bgColor: Provider.of<FacilityManager>(context).getProdLineBackgroundColorAt(index),
+                header: Provider.of<FacilityManager>(context).getProdLineNameAt(index),
+                id: Provider.of<FacilityManager>(context).getProdLineIdAt(index),
+                imagePath: Provider.of<FacilityManager>(context).getProdLineImagePathAt(index),
                 press: () {
-                  Provider.of<FacilityManager>(context, listen: false).updateCurrentFacilityIndex(index);
                   return Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => ScreenFacilityDisplay(),
+                      builder: (context) => ScreenFacilityDisplay(
+                        prodLine: Provider.of<FacilityManager>(context).getProdLineAt(index),
+                      ),
                     ),
                   );
                 },

@@ -34,3 +34,11 @@ const kSubDeptCardStatValue = TextStyle(
   color: Colors.blue,
   fontWeight: FontWeight.bold,
 );
+const kDeptSelectStatValue = TextStyle(
+  fontSize: 12.0,
+  color: Colors.black54
+);
+const kDeptUpgradeStyle = TextStyle(
+    fontSize: 13.0,
+    color: Colors.black87
+);

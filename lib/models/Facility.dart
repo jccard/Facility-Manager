@@ -1,61 +1,38 @@
-/*
-The Facility is the top-level entity that the Player manages.
-
-It is comprised of Departments, which are in turn comprised of SubDepartments.
-
-Each of the SubDepartments generates something of value, or potential value.
-Those values are aggregated up through to the Facility, to make getting the total
- value per cycle easier to calculate.
- */
-
 import 'package:flutter/material.dart';
 import 'package:dart_json_mapper/dart_json_mapper.dart';
-//models
-import 'package:shop_app/models/Department.dart';
-
-//FacilityTier { shop, plant, factory }
-
-//removed extends to make PoC for JSON constructor
-//class Facility extends OrgUnit {
+import 'package:shop_app/models/ProdLine.dart';
+import 'package:shop_app/models/Modifier.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 @jsonSerializable
 class Facility {
-  //some are commented out to try JSON
-  //if it works, will need to update to String based
-  //eg: Icon icon updated to String iconPath;
-  //region COMMON PROPERTIES
+  //region PROPERTIES
   int id;
   String name;
   String image;
-  String icon;
+  String archetypeIcon;
+  String subtypeIcon;
   Color backgroundColor;
   Color primaryColor;
   Color secondaryColor;
   Color accentColor;
   String shortDescription;
   String longDescription;
-  //
   bool active;
   double grossIncomePerCycle;
   double netIncomePerCycle;
-  //List<Modifier> currentAdditiveModifiers;
-  //List<Modifier> currentMultiplicativeModifiers;
+  double currentCash;
+  List<Modifier> modifiers;
+  List<ProdLine> productionLines;
   //endregion
 
-  //region CLASS SPECIFIC PROPERTIES
-//  String facilityTier;
-//  Icon tierIcon;
-//  String tierIconPath;
-  List<Department> departments;
-  //endregion
-
-  //region CLASS SPECIFIC CONSTRUCTORS
-  Facility({
-    //common properties
+  //region CONSTRUCTOR
+  Facility (
     this.id,
     this.name,
     this.image,
-    this.icon,
+    this.archetypeIcon,
+    this.subtypeIcon,
     this.backgroundColor,
     this.primaryColor,
     this.secondaryColor,
@@ -65,26 +42,17 @@ class Facility {
     this.active,
     this.grossIncomePerCycle,
     this.netIncomePerCycle,
-//    this.currentAdditiveModifiers,
-//    this.currentMultiplicativeModifiers,
-//    //class specific properties
-//    this.facilityTier,
-//    this.tierIcon,
-//    this.tierIconPath,
-    this.departments,
-  });
+    this.currentCash,
+    this.modifiers,
+    this.productionLines
+  );
   //endregion
 
-  //region CONSTRUCTOR HELPERS
-  // TODO: create constructor helper for icons in Facility
-  // update the icons in JSON to use a iconLib string
-  // in addition to the name of the icon
-  // then I can use those together to create the icon
-  // using a
-  //endregion
+  //region FUNCTIONS
+  int getId() {
+    return this.id;
+  }
 
-  //region COMMON FUNCTIONS
-  //region GETTERS
   String getName() {
     return this.name;
   }
@@ -93,8 +61,17 @@ class Facility {
     return this.image;
   }
 
-  String getIcon() {
-    return this.icon;
+  IconData getArchetypeIconData() {
+    return this.archetypeIcon != null
+      ? MdiIcons.fromString(this.archetypeIcon)
+      : MdiIcons.fromString('help-circle');
+  }
+
+  IconData getSubtypeIconData() {
+    return this.subtypeIcon != null
+        //? Icon(MdiIcons.fromString(this.subtypeIcon))
+        ? MdiIcons.fromString(this.subtypeIcon)
+        : MdiIcons.fromString('help-circle');
   }
 
   Color getBackgroundColor() {
@@ -106,7 +83,7 @@ class Facility {
   }
 
   Color getSecondaryColor() {
-    return this.primaryColor;
+    return this.secondaryColor;
   }
 
   Color getAccentColor() {
@@ -129,28 +106,29 @@ class Facility {
     return this.grossIncomePerCycle;
   }
 
+  void updateGrossIncomePerCycle() {
+    this.grossIncomePerCycle = 0;
+    for (var i = 0; i < productionLines.length; i++) {
+      productionLines[i].updateGrossIncomePerCycle();
+      this.grossIncomePerCycle += productionLines[i].grossIncomePerCycle;
+    }
+  }
+
   double getNetIncomePerCycle() {
+    //TODO after adding in Facility level modifiers, net becomes function of gross and mods
     return this.netIncomePerCycle;
   }
-  //endregion
-  //region SETTERS
-  double updateGrossIncomePerCycle(double) {
-    grossIncomePerCycle = double;
-    //notifyListeners();
+
+  double getCurrentCash() {
+    return this.currentCash;
   }
-  //endregion
 
-  /*
-    List<Modifier> getCurrentAdditiveModifiers () {
-      return this.currentAdditiveModifiers;
-    }
+  void increaseCurrentCash(int amount) {
+    this.currentCash += amount;
+  }
 
-    List<Modifier> currentMultiplicativeModifiers () {
-      return this.currentMultiplicativeModifiers;
-    }
-  */
-  //endregion
-
-  //region CLASS SPECIFIC FUNCTIONS
+  void decreaseCurrentCash(int amount) {
+    this.currentCash -= amount;
+  }
   //endregion
 }
